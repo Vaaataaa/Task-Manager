@@ -15,9 +15,24 @@ Task Manager is a Java application using MySQL to manage tasks. Allows you to ad
 
 ## Installation
 1. Install MySQL and create the database 'task_manager'.
-2. Configure the connection to the DatabaseManager.java (specify your MySQL password).
-3. Import the project into Eclipse as a Maven project.
-4. Run 'Main.java'.
+   CREATE DATABASE task_manager;
+
+    USE task_manager;
+
+    CREATE TABLE tasks (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(255),
+        description TEXT,
+        due_date DATE,
+        priority INT,
+        category VARCHAR(50),
+        creation_date DATE
+    );
+
+
+3. Configure the connection to the DatabaseManager.java (specify your MySQL password).
+4. Import the project into Eclipse as a Maven project.
+5. Run 'Main.java'.
 
 ## Use
 - Select option 1 to add a task.
